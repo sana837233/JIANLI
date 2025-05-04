@@ -1,0 +1,159 @@
+/* 全局样式设置 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 容器样式，用于包裹整个简历内容，设置宽度、居中、背景色和阴影等 */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 头像样式，设置大小和圆形裁剪 */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* 标题样式，设置颜色、大小和下边框 */
+h1 {
+    color: #0066cc;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+}
+
+/* 副标题样式，设置颜色和大小 */
+h2 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* 个人信息段落样式，设置内边距和一些视觉区分 */
+.personal-info p {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* 给个人信息段落添加图标伪元素 */
+.personal-info p::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 姓名前图标 */
+.personal-info p:nth-child(1)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>') no-repeat center;
+}
+
+/* 籍贯前图标 */
+.personal-info p:nth-child(2)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M17.96 4h-1.5l-1.5-4h-11l-1.5 4h-1.5l6.52 11.52-1.32 1.56L4 16l6.48 3.68 1.32-1.56L20 16l-4.04-2.48L17.96 4zm-1.96 12.94L12 19.06l-4-2.18v-10.6l1.5-4h11l1.5 4v10.6z"/></svg>') no-repeat center;
+}
+
+/* 出生年月前图标 */
+.personal-info p:nth-child(3)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6c0-1.1-.89-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>') no-repeat center;
+}
+
+/* 毕业院校前图标 */
+.personal-info p:nth-child(4)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M18 16v4H6v-4H4v4c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2v-4h-2zm0-10h-5l-1.41-1.41L7.1 9H2v2h4.6l2.2-2.2 1.4 1.4 3.59 3.59L16 10h2V6zm-6 4l-2 2H8v-2h2v-2h2v2h2v2h-2z"/></svg>') no-repeat center;
+}
+
+/* 手机号码前图标 */
+.personal-info p:nth-child(5)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M6 2l.08.97L16.84 9H20v5h-3.16l1.08 1.03L18 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm12 18l-1.08-1.03L16.84 15H20v-5h-3.16l-1.08-1.03L6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2z"/></svg>') no-repeat center;
+}
+
+/* 邮箱前图标 */
+.personal-info p:nth-child(6)::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23555" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM6 18l8-5.66 8 5.66V6.34L14 10.66 6 6.34v11.66z"/></svg>') no-repeat center;
+}
+
+/* 经历部分标题样式，设置颜色、下边框和图标 */
+section h3 {
+    color: #0066cc;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    position: relative;
+    padding-left: 25px;
+}
+
+section h3::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 整合营销活动策划标题前图标
+section:nth-child(2) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M15 10a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 1-1zm-4 5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm5-11a1 1 0 0 1 1 1v3h-3a1 1 0 0 1 0-2h3V5a1 1 0 0 1 2 0v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 0 1 0-2h3V5a1 1 0 0 1 1-1z"/></svg>') no-repeat center;
+}
+
+/* 数据分析标题前图标 */
+section:nth-child(3) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M19 11H5v2h14v-2zm0 5H5v2h14v-2zm0-10H5v2h14V6z"/></svg>') no-repeat center;
+}
+
+/* 行业与产品调研标题前图标 */
+section:nth-child(4) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M15.5 5h-11C3.67 5 3 5.67 3 6.5v11C3 18.33 3.67 19 4.5 19h11c.83 0 1.5-.67 1.5-1.5v-11c0-.83-.67-1.5-1.5-1.5zm0 12.5h-11v-11h11v11zm-4-9.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>') no-repeat center;
+} */
+
+/* 视觉与流程图设计标题前图标 */
+/* section:nth-child(5) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-11h2v2h-2zm0 4h2v2h-2z"/></svg>') no-repeat center;
+} */
+
+/* 项目经历标题前图标 */
+/* section:nth-child(6) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M17 7h-5V4h-2v3H7v2h3v3H7v2h3v3h4v-3h3v-2h-3v-3h3V7zm-5 8H7v-2h5v2zm0-4H7V9h5v2z"/></svg>') no-repeat center;
+} */
+
+/* 技能与工具标题前图标 */
+/* section:nth-child(7) h3::before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%230066cc" d="M15.5 5h-11C3.67 5 3 5.67 3 6.5v11C3 18.33 3.67 19 4.5 19h11c.83 0 1.5-.67 1.5-1.5v-11c0-.83-.67-1.5-1.5-1.5zm0 12.5h-11v-11h11v11zm-1-9l-2.5 3.01L10 12l2.5 3.01L14.5 12z"/></svg>') no-repeat center;
+} */
+
+/* 鼠标悬停在标题图标上的效果 */
+section h3:hover::before {
+    transform: translateY(-50%) scale(1.1); /* 放大 1.1 倍 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+/* 列表项样式，设置内边距等 */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
